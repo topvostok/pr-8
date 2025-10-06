@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:Shop_Пешин"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" MinHeight="450" MinWidth="800">
-    <Grid>
-        <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
-            <StackPanel x:Name="parent" Orientation="Horizontal">
+    <Grid Background="White">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled"
+                      Padding="20" VerticalAlignment="Center">
+            <StackPanel x:Name="parent" Orientation="Horizontal" 
+                       VerticalAlignment="Center"
+                       Height="350">
             </StackPanel>
         </ScrollViewer>
     </Grid>

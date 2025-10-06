@@ -5,26 +5,43 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:Shop_Пешин.Elements"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="200">
+             d:DesignHeight="300" d:DesignWidth="200"
+             Margin="15,0,0,0">
+    <!-- Добавлен отступ справа между элементами -->
 
-    <Grid Margin="0,0,-79,-79">
-        <Border Margin="10,0,69,40" Width="200" CornerRadius="20" Background="#FF5A5A5A">
+    <Grid>
+        <Border Width="200" Height="300" CornerRadius="20" Background="#FF5A5A5A">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="200"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Image Margin="20" Width="160" Source="/Shop_Пешин;component/lmages/ic_item.png"/>
-                <Label x:Name="tb_Name" Content="Название" Margin="10,10,0,0" Grid.Row="1"
-                       HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold"
-                       Foreground="White"/>
-                <Label x:Name="tb_Price" Content="Цена: " Margin="10,41,10,0" Grid.Row="1"
-                       VerticalAlignment="Top" Foreground="White"/>
-                <Label x:Name="tb_Characteristic" Content="Характеристика: " Margin="10,72,10,0"
-                       Grid.Row="1" VerticalAlignment="Top" Foreground="White"/>
+
+                <!-- Изображение товара -->
+                <Image Grid.Row="0" Margin="20" Width="160" Height="160" 
+                       Source="C:\Users\student-a502\Desktop\Shop_Пешин\lmages\ic_item.png" 
+                       Stretch="Uniform"/>
+
+                <!-- Информация о товаре -->
+                <StackPanel Grid.Row="1" Margin="10">
+                    <Label x:Name="tb_Name" Content="Название" 
+                           HorizontalContentAlignment="Center" 
+                           FontWeight="Bold" Foreground="White"
+                           FontSize="14" Padding="0" Margin="0,0,0,5"/>
+
+                    <Label x:Name="tb_Price" Content="Цена: " 
+                           Foreground="White" FontSize="12"
+                           Padding="0" Margin="0,0,0,5"/>
+
+                    <Label x:Name="tb_Characteristic" Content="Характеристика: " 
+                           Foreground="White" FontSize="12"
+                           Padding="0"/>
+                </StackPanel>
             </Grid>
+
             <Border.Effect>
-                <DropShadowEffect BlurRadius="3"/>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="3" 
+                                  Opacity="0.3" Color="Black"/>
             </Border.Effect>
         </Border>
     </Grid>
