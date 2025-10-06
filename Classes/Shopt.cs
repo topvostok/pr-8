@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace Shop_Пешин.Classes
 {
-    public class Shop
+    public class Sport : Shop
     {
-        public string Name;
-        public int Price;
+        public string Size;
 
-        public Shop(string name, int price)
+        public Sport(string name, int price, string size) : base(name, price)
         {
-            this.Name = name;
-            this.Price = price;
+            this.Size = size;
         }
     }
 }
