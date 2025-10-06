@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Shop_Пешин.Classes
 {
-    internal class Shop
+    public class Shop
     {
+        public string Name;
+        public int Price;
+
+        public Shop(string name, int price)
+        {
+            this.Name = name;
+            this.Price = price;
+        }
+
     }
 }
